@@ -1,75 +1,30 @@
-# Nuxt 3 Minimal Starter
+# Projeto Frontend: Consumo da API de Star Wars via Backend
+Este projeto é uma aplicação frontend desenvolvida em Nuxt.js que consome dados de um backend especializado, o qual faz a integração com a API de Star Wars. Para que o frontend funcione corretamente, é necessário que o backend esteja rodando.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Instalação e Configuração
+Passos para Rodar o Projeto
+Clone este repositório:
 
-## Setup
+git clone <url-do-repositorio>
+Navegue até o diretório do projeto:
 
-Make sure to install the dependencies:
+cd nome-do-projeto
+Instale as dependências:
 
-```bash
-# npm
 npm install
+Certifique-se de que o backend está rodando. Siga as instruções do backend e garanta que ele esteja funcionando em http://localhost:3000/ ou na URL configurada.
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+## Inicie o servidor de desenvolvimento do frontend:
 npm run dev
+O frontend estará disponível em http://localhost:3002/, mas consumirá os dados do backend.
 
-# pnpm
-pnpm run dev
+## Sobre o Projeto
+Este projeto utiliza Nuxt.js para construir a interface que exibe dados consumidos de um backend especializado. O backend, por sua vez, integra-se com a API pública de Star Wars (https://swapi.dev/) e retorna os dados ao frontend.
 
-# yarn
-yarn dev
+## Funcionalidades
+Exibição de informações sobre planetas, filmes do universo Star Wars.
+Integração com um backend para consumir os dados da API de Star Wars.
 
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Pré-requisitos
+Node.js: Certifique-se de ter o Node.js instalado em sua máquina.
+Backend: O backend da aplicação precisa estar rodando para fornecer os dados necessários.

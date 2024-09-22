@@ -1,6 +1,5 @@
 <template>
   <div class="star-wars-theme">
-    <!-- Conteúdo da página de login -->
     <div class="login-page">
       <h1>Login</h1>
       <form @submit.prevent="handleLogin">
@@ -16,10 +15,8 @@
       </form>
       <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
 
-      <!-- Botão para registro -->
       <p>Não tem uma conta? <button @click="goToRegister">Registre-se aqui</button></p>
 
-      <!-- Botão de Login com Google -->
       <div class="google-login">
         <button @click="handleGoogleLogin">Entrar com Google</button>
       </div>
@@ -40,7 +37,7 @@ const tokenCookie = useCookie('auth_token')
 
 async function handleLogin() {
   try {
-    const response = await $fetch('http://localhost:3000/api/auth/login', {
+    const response = await $fetch('http://localhost:3000/auth/login', {
       method: 'POST',
       body: { email: email.value, password: password.value },
     })
@@ -61,7 +58,7 @@ function goToRegister() {
 
 // Função para iniciar o login com Google
 function handleGoogleLogin() {
-  window.location.href = 'http://localhost:3000/api/auth/google' // URL do endpoint de autenticação do Google no backend
+  window.location.href = 'http://localhost:3000/auth/google'
 }
 </script>
 

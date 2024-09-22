@@ -28,15 +28,14 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useCookie, useRouter } from '#imports' // ou '#app'
+import { useCookie, useRouter } from '#imports'
 
 const router = useRouter()
 const tokenCookie = useCookie('auth_token')
 
-const user = ref(null) // Inicialmente nulo, para armazenar objeto do usuário
-const errorMessage = ref('') // Para armazenar mensagens de erro
-const isLoading = ref(true) // Para indicar o estado de carregamento
-
+const user = ref(null) 
+const errorMessage = ref('') 
+const isLoading = ref(true) 
 
 function parseJwt(token) {
   try {
@@ -65,7 +64,7 @@ async function fetchUser(email) {
   }
 
   try {
-    const response = await $fetch(`http://localhost:3000/api/user/${email}`, {
+    const response = await $fetch(`http://localhost:3000/user/${email}`, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${tokenCookie.value}`,
